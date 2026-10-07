@@ -21,9 +21,9 @@ window.TESTS = [
   {
     id: "python",
     title: "Python",
-    description: "Core language, data structures, the standard library and scripting.",
+    description: "Data types, strings, control flow, functions, collections, classes, exceptions and tooling (Python 3.10+).",
     durationMinutes: 30,
-    status: "soon"
+    status: "live"
   },
   {
     id: "powershell",

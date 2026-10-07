@@ -278,7 +278,7 @@
           '<label for="text-answer">Your answer</label>' +
           '<input id="text-answer" class="mono" type="text" autocomplete="off" autocapitalize="off" ' +
             'autocorrect="off" spellcheck="false" aria-describedby="q-heading text-hint" value="' + escapeHtml(a || "") + '">' +
-          '<p id="text-hint" class="hint">Type the full command. Capital letters and extra spaces don\'t matter.</p>' +
+          '<p id="text-hint" class="hint">Type the full command or output. Capital letters and extra spaces don\'t matter.</p>' +
           "</div>";
       } else {
         var multi = q.type === "multi";
