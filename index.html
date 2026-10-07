@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills Test</title>
+  <meta name="description" content="Timed technical skills tests for interviews.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="landing">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">$_</span> Skills Test</a>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>Technical skills test</h1>
+      <p class="lede">Enter your name, choose the test your interviewer asked for, and start when you're ready.
+        Your results are shown at the end so you can share them.</p>
+    </section>
+
+    <form id="start-form" class="card" novalidate>
+      <div class="field">
+        <label for="candidate">Your name</label>
+        <input id="candidate" name="candidate" type="text" autocomplete="name" maxlength="80" required
+               aria-describedby="name-error">
+        <p id="name-error" class="field-error" hidden>Please enter your name.</p>
+      </div>
+
+      <fieldset class="test-picker">
+        <legend>Choose a test</legend>
+        <div id="test-list" class="test-grid"></div>
+        <p id="test-error" class="field-error" hidden>Please choose a test.</p>
+      </fieldset>
+
+      <div class="rules">
+        <h2>Before you start</h2>
+        <ul>
+          <li>The test is timed. The clock starts as soon as you press Start, and the test ends automatically when time runs out.</li>
+          <li>Questions and answer options appear in a random order. You can move back and forth and change answers until you finish.</li>
+          <li>Some questions ask you to type a command. Capital letters and extra spaces don't matter.</li>
+          <li>Refreshing the page won't lose your answers or reset the clock.</li>
+        </ul>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-large">Start test</button>
+    </form>
+  </main>
+
+  <script src="data/tests.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills Test</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="test">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">$_</span> Skills Test</a>
+    <span id="test-title" class="topbar-title"></span>
+    <div id="timer" class="timer" role="timer" aria-label="Time remaining" hidden>--:--</div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="quiz" hidden>
+      <div class="progress" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+      <p id="q-meta" class="q-meta"></p>
+
+      <form id="q-form" class="card question" autocomplete="off"></form>
+
+      <div class="q-actions">
+        <button type="button" id="prev-btn" class="btn">&larr; Previous</button>
+        <button type="button" id="next-btn" class="btn btn-primary">Next &rarr;</button>
+        <button type="button" id="finish-btn" class="btn btn-ghost">Finish test</button>
+      </div>
+
+      <nav class="q-grid-wrap" aria-label="Jump to question">
+        <h2 class="q-grid-title">Questions <span id="answered-count" class="muted"></span></h2>
+        <div id="q-grid" class="q-grid"></div>
+      </nav>
+    </section>
+
+    <section id="results" hidden></section>
+
+    <section id="error" class="card" hidden>
+      <h1>Can't start this test</h1>
+      <p id="error-msg"></p>
+      <p><a class="btn btn-primary" href="index.html">Go to the start page</a></p>
+    </section>
+  </main>
+
+  <dialog id="finish-dialog" aria-labelledby="finish-title" aria-describedby="finish-msg">
+    <h2 id="finish-title">Finish the test?</h2>
+    <p id="finish-msg"></p>
+    <div class="dialog-actions">
+      <button type="button" id="finish-cancel" class="btn">Keep going</button>
+      <button type="button" id="finish-confirm" class="btn btn-primary">Finish and see results</button>
+    </div>
+  </dialog>
+
+  <div id="sr-live" class="visually-hidden" aria-live="polite"></div>
+
+  <script src="data/tests.js"></script>
+  <script src="data/linux.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
